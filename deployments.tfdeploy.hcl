@@ -8,7 +8,7 @@ identity_token "aws" {
 deployment "development" {
   inputs = {
     regions        = ["us-east-1"]
-    role_arn       = "<YOUR_ROLE_ARN>"
+    role_arn       = "aws:iam::053732977191:role/stacks-legarasis-stacks-demo"
     identity_token = identity_token.aws.jwt
     default_tags = {
       Stack       = "learn-stacks-deploy-aws",
@@ -20,7 +20,7 @@ deployment "development" {
 deployment "production" {
   inputs = {
     regions        = ["us-east-1", "us-west-1"]
-    role_arn       = "<YOUR_ROLE_ARN>"
+    role_arn       = "aws:iam::053732977191:role/stacks-legarasis-stacks-demo"
     identity_token = identity_token.aws.jwt
     default_tags = {
       Stack       = "learn-stacks-deploy-aws",
